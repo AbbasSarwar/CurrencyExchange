@@ -328,3 +328,8 @@ form input[type="button"]:hover {
   padding: 30% 0;
   color: #392577;
 }
+
+.Amount {
+  padding: 0 10px;
+  color: #e2d8fe;
+}

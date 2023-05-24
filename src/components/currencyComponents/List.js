@@ -23,6 +23,7 @@ const List = () => {
             <img src={image1} alt="" />
             {' '}
             {convert?.query?.from}
+            <span className="Amount">{convert?.query?.amount ? `Amount: ${convert.query.amount}` : ''}</span>
           </div>
           <p className={convert?.result ? '' : styles.falseLine}>{convert?.result ? convert.result : 'If you found no value then possible thats are not available to convert'}</p>
           <div className="imags">
@@ -34,7 +35,7 @@ const List = () => {
       <ul className="list">
         <div className="displaytop">
           <h2>Currency Code</h2>
-          <h2>USD converted</h2>
+          <h2>$USD Latest Price</h2>
           <h2>Currencies</h2>
         </div>
         {latest && latest.rates && Object.entries(latest.rates).map(([currency, rate]) => (
