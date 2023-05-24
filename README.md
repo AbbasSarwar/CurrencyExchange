@@ -42,8 +42,6 @@
 - Latest USD converted prices
 - Provide country information 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## :rocket: Live Demo <a name="live-demo"></a>
 -[DEMO](https://abbassarwar.github.io/Math-Magician/](https://currencyexchange-rl6q.onrender.com/)
 
