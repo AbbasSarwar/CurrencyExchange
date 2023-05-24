@@ -44,6 +44,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## :rocket: Live Demo <a name="live-demo"></a>
+-[DEMO](https://abbassarwar.github.io/Math-Magician/](https://currencyexchange-rl6q.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
