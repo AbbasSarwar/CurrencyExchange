@@ -7,7 +7,7 @@ const Navbar = () => (
     <nav>
       <ul className="menu">
         <li><NavLink className={styles.link} to="/">Converter</NavLink></li>
-        <li><NavLink className={styles.link} to="/support">Support Currencies</NavLink></li>
+        <li><NavLink className={styles.link} to="/support">Support</NavLink></li>
       </ul>
     </nav>
   </header>

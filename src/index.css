@@ -333,3 +333,76 @@ form input[type="button"]:hover {
   padding: 0 10px;
   color: #e2d8fe;
 }
+
+@media only screen and (max-width:786px) {
+  .Container h1 {
+    padding: 10px 0;
+  }
+
+  .Exchange {
+    width: 100vw;
+    padding: 0 12vw;
+  }
+
+  .listContainer {
+    width: 100vw;
+    padding: 0 12vw;
+  }
+
+  .formInside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    padding: 0 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+    height: 100%;
+  }
+  .formInside label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  form input,select {
+    height: 5vh !important;
+    width: 100% !important;
+  }
+  .equal {
+    text-align: center;
+  }
+  form input[type="button"]{
+    width: 20% !important;
+  }
+
+  .displaytop {
+    font-size: 10px;
+  }
+
+  .listitem {
+    font-size: 14px;
+  }
+
+  form input[type="button"]{
+    margin: 20px 0;
+    padding: 4px 0;
+  }
+
+  .support {
+    padding: 0;
+    width: 100vw;
+  }
+  .support ul {
+    height: 100vh;
+  }
+  .support p {
+    font-size: 15px;
+  }
+  .support h1 {
+    padding: 20px 0;
+  }
+}
