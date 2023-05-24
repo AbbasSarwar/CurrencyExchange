@@ -5,23 +5,27 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  background-color: rgb(10, 10, 69);
+  background-color: #1d1d1d;
   color: #fff;
   font-family: sans-serif;
 }
+
 header a {
   color: #fff;
   text-decoration: none;
 }
+
 header h1 {
   font-size: 24px;
 }
+
 .menu {
   list-style: none;
   display: flex;
@@ -29,10 +33,7 @@ header h1 {
   gap: 5px;
   color: #fff;
 }
-.menu NavLink {
-  color: #fff;
-  text-decoration: none;
-}
+
 .menu .active {
   color: rgb(118, 118, 240);
 }
@@ -54,6 +55,7 @@ header h1 {
 }
 
 form {
+  background-color: #ec4c8a;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,12 +83,16 @@ form {
 }
 
 .formInside input[type="number"] {
+  background-color: #e3c9d3;
+  color: #271c3b;
   width: 15vw;
-  height: 5vh;
+  height: 8vh;
   border-radius: 5px;
   border: none;
   box-shadow: 0 0 10px rgb(190, 182, 182);
   outline: none;
+  text-indent: 5px;
+  font-size: 18px;
 }
 
 .menus ul {
@@ -102,6 +108,7 @@ form {
 }
 
 .formInside select {
+  background-color: #e3c9d3;
   display: block;
   width: 18vw;
   height: 8vh;
@@ -109,6 +116,7 @@ form {
   outline: none;
   border: none;
   box-shadow: 0 0 10px rgb(190, 182, 182);
+  font-size: 18px;
 }
 
 .formInside span {
@@ -123,6 +131,7 @@ form {
   gap: 10px;
   flex: 1;
 }
+
 #from {
   flex: 3;
 }
@@ -136,18 +145,19 @@ form {
   padding: 100px 0;
 }
 
-form input[type="button"]{
+form input[type="button"] {
   width: 20%;
   height: 8vh;
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 5px rgb(190, 182, 182);
-  background-color: #c4d9f554;
-  transition: .5s;
+  background-color: #1d1d1d;
+  color: #fff;
+  transition: 0.5s;
   font-size: 16px;
 }
 
-form input[type="button"]:hover{
+form input[type="button"]:hover {
   background-color: blue;
   color: #fff;
 }
@@ -159,13 +169,14 @@ form input[type="button"]:hover{
 }
 
 .listContainer .equalto {
-  background-color: beige;
-  padding: 30px 0px;
+  background-color: #ec4c8a;
+  padding: 30px 0;
   font-size: 18px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
   gap: 20px;
 }
 
@@ -186,21 +197,21 @@ form input[type="button"]:hover{
   width: 100%;
   padding: 10px;
   list-style: none;
-  background-color: rgb(60, 73, 74);
+  background-color: #1d1d1d;
   color: #fff;
 }
 
 .list::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 .list::-webkit-scrollbar-track {
-  background-color: #f1f1f1; 
+  background-color: #f1f1f1;
 }
 
 .list::-webkit-scrollbar-thumb {
-  background-color: #888; 
-  border-radius: 4px; 
+  background-color: #888;
+  border-radius: 4px;
 }
 
 .list::-webkit-scrollbar-thumb:hover {
@@ -212,19 +223,36 @@ form input[type="button"]:hover{
   flex-direction: row;
   justify-content: space-between;
   padding: 0 20px;
+  font-size: 18px;
+  font-family: sans-serif;
 }
 
 .support {
-  padding: 20px 100px; 
+  padding: 20px 100px;
 }
 
 .supportContainer h1 {
   padding-bottom: 40px;
 }
+
 .support h1 {
   text-align: center;
   font-family: sans-serif;
 }
+
+.supportList::-webkit-scrollbar {
+  width: 20px;
+}
+
+.supportList::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.supportList::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
 .support .supportList {
   list-style: none;
   display: flex;
@@ -235,19 +263,8 @@ form input[type="button"]:hover{
   gap: 4px;
   box-shadow: 0 0 10px darkcyan;
   border-radius: 10px;
-}
-
-.supportList::-webkit-scrollbar {
-  width: 20px; 
-}
-
-.supportList::-webkit-scrollbar-track {
-  background-color: #f1f1f1; 
-}
-
-.supportList::-webkit-scrollbar-thumb {
-  background-color: #888; 
-  border-radius: 4px; 
+  background-color: #ec4c8a;
+  color: #fff;
 }
 
 .supportList::-webkit-scrollbar-thumb:hover {
@@ -259,7 +276,7 @@ form input[type="button"]:hover{
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  border-bottom: .2px solid rgb(232, 221, 221);
+  border-bottom: 0.2px solid rgb(232, 221, 221);
   font-size: 14px;
   flex-wrap: wrap;
   gap: 5px;
@@ -277,4 +294,37 @@ form input[type="button"]:hover{
 
 #selectedIcon {
   display: none;
+}
+
+.displaytop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #868dc4;
+  padding: 25px 0;
+}
+
+.imags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.supportedshow {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.date {
+  font-size: 15px;
+}
+
+.Loading {
+  font-size: 30px;
+  text-align: center;
+  padding: 30% 0;
+  color: #392577;
 }

@@ -14,18 +14,30 @@ const List = () => {
   }, [Dispatch]);
 
   const { convert, latest } = useSelector((state) => state.exchange);
-  const newRef = latest.rates;
   return (
     <section className="listContainer">
       <div className="equalto">
+        <h1>Conversion</h1>
         <div className="changing">
-          <img src={image1} alt="" />
-          <p className={convert.result ? '' : styles.falseLine}>{convert.result ? convert.result : 'If you found no value then possible thats are not available to convert'}</p>
-          <img src={image2} alt="" />
+          <div className="imags">
+            <img src={image1} alt="" />
+            {' '}
+            {convert?.query?.from}
+          </div>
+          <p className={convert?.result ? '' : styles.falseLine}>{convert?.result ? convert.result : 'If you found no value then possible thats are not available to convert'}</p>
+          <div className="imags">
+            {convert?.query?.to}
+            <img src={image2} alt="" />
+          </div>
         </div>
       </div>
       <ul className="list">
-        {newRef && Object.entries(newRef).map(([currency, rate]) => (
+        <div className="displaytop">
+          <h2>Currency Code</h2>
+          <h2>USD converted</h2>
+          <h2>Currencies</h2>
+        </div>
+        {latest && latest.rates && Object.entries(latest.rates).map(([currency, rate]) => (
           <li className="listitem" key={uuidv4()}>
             <p>{currency}</p>
             <p>{rate}</p>

@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { FetchData, GetData } from '../../redux/APIs';
+import { FetchData, GetData, Supported } from '../../redux/APIs';
 import { add, add2 } from '../../redux/exchangeSlice';
 
 const Exchange = () => {
   const dispatch = useDispatch();
-  const { exchange } = useSelector((state) => state.exchange);
+  const { exchange, supported } = useSelector((state) => state.exchange);
   const newData = Object.values(exchange);
   const [selectedOption, setSelectedOption] = useState('');
   const [selectedIcon, setSelectedIcon] = useState('');
@@ -17,6 +17,13 @@ const Exchange = () => {
   useEffect(() => {
     dispatch(FetchData());
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(Supported());
+  }, [dispatch]);
+
+  const { symbols } = supported;
+  const codes = symbols ? Object.entries(symbols) : [];
 
   const handleSelectChange = (event) => {
     const selectedValue = event.target.value;
@@ -47,8 +54,8 @@ const Exchange = () => {
     } else {
       dispatch(GetData({
         amount: data,
-        from: 'AGLD',
-        to: 'AGLD',
+        from: 'AED',
+        to: 'AED',
       }));
     }
     setSelectedOption('');
@@ -67,11 +74,11 @@ const Exchange = () => {
             <span>From</span>
             <div className="selectors">
               <select name="from" id="from" value={selectedOption} onChange={handleSelectChange}>
-                {newData.map((item) => {
-                  const { currencyCode } = item;
+                {codes.map(([code, data]) => {
+                  const { description } = data;
                   return (
-                    <option key={uuidv4()} value={currencyCode} label={currencyCode}>
-                      {currencyCode}
+                    <option key={uuidv4()} value={code} label={code}>
+                      {description}
                     </option>
                   );
                 })}
@@ -88,11 +95,11 @@ const Exchange = () => {
             <span>To</span>
             <div className="selectors">
               <select name="to" id="to" value={selectedOptions} onChange={handleSelectChanges}>
-                {newData.map((item) => {
-                  const { currencyCode } = item;
+                {codes.map(([code, data]) => {
+                  const { description } = data;
                   return (
-                    <option key={uuidv4()} value={currencyCode} label={currencyCode}>
-                      {currencyCode}
+                    <option key={uuidv4()} value={code} label={code}>
+                      {description}
                     </option>
                   );
                 })}

@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { FetchData, GetData, LatestData } from './APIs';
+import {
+  FetchData, GetData, LatestData, Supported,
+} from './APIs';
 
 const initialState = {
   exchange: [],
@@ -7,6 +9,7 @@ const initialState = {
   image2: [],
   convert: [],
   latest: [],
+  supported: [],
   status: false,
   error: null,
 };
@@ -48,6 +51,10 @@ const exchangeSlice = createSlice({
       .addCase(LatestData.fulfilled, (state, action) => {
         state.status = false;
         state.latest = action.payload;
+      })
+      .addCase(Supported.fulfilled, (state, action) => {
+        state.status = false;
+        state.supported = action.payload;
       });
   },
 });

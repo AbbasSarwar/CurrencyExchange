@@ -14,7 +14,7 @@ const Support = () => {
     return error;
   }
   if (status) {
-    return 'Loading.....';
+    return <p className="Loading">...Loading...</p>;
   }
   return (
     <section className="support">
@@ -24,23 +24,22 @@ const Support = () => {
           {
             Ref.map((item) => {
               const {
-                currencyName, countryName, countryCode, icon,
+                currencyName, countryCode, icon,
                 availableFrom, availableUntil,
                 status,
               } = item;
               return (
-                <li key={uuidv4()}>
+                <li className="supprtedshow" key={uuidv4()}>
                   <img src={icon} alt="" />
                   <p>{currencyName}</p>
                   <p>{countryCode }</p>
-                  <p>
+                  <p className="date">
                     {availableFrom}
                     {'  '}
                     -
                     {'  '}
                     {availableUntil}
                   </p>
-                  <p>{countryName}</p>
                   <p className="status">{status}</p>
                 </li>
               );

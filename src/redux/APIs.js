@@ -11,6 +11,12 @@ const FetchData = createAsyncThunk('fetching/app', async () => {
   }
 });
 
+const Supported = createAsyncThunk('Supported/app', async () => {
+  const res = await axios.get('https://api.exchangerate.host/symbols');
+  const data = await res.data;
+  return data;
+});
+
 const GetData = createAsyncThunk('getdata/app', async ({ amount, from, to }) => {
   const res = await axios.get(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`);
   const data = await res.data;
@@ -22,4 +28,6 @@ const LatestData = createAsyncThunk('latest/currency', async () => {
   const data = await res.data;
   return data;
 });
-export { GetData, FetchData, LatestData };
+export {
+  GetData, FetchData, LatestData, Supported,
+};
