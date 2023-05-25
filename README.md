@@ -9,6 +9,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [:rocket: Live Demo ](#rocket-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -37,17 +38,17 @@
 
 ### Key Features <a name="key-features"></a>
 
-- User can Convert Currency
+- Provide cards with flag
 - Provide latest prices conversion
-- Latest USD converted prices
-- Provide country information 
+- Provide countryName & currency
+- Provide other information 
 
 <!-- LIVE DEMO -->
 
 ## :rocket: Live Demo <a name="live-demo"></a>
 
 
-- [Link](https://currencyexchange-rl6q.onrender.com)
+- [Link](https://currencyexchange-sgx0.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

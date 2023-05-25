@@ -53,7 +53,7 @@ const Card = () => {
             <img src={currency.icon} alt="" />
             <div className="currency">
               <h1>Currency Names:</h1>
-              <p>{currency.currencyName}</p>
+              <p>{currency.currencyCode}</p>
             </div>
             <div className="date">
               <p>
