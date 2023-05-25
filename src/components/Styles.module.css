@@ -1,16 +1,9 @@
-.link {
-  text-decoration: none;
-  transition: 0.5s;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.link:hover {
-  background-color: rgb(102, 102, 204);
-}
-
 .falseLine {
   color: rgb(255, 254, 254);
+}
+
+.styleLink {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 786px) {

@@ -3,11 +3,21 @@ import styles from './Styles.module.css';
 
 const Navbar = () => (
   <header>
-    <h1><a href="/">Currency Exchanger</a></h1>
     <nav>
       <ul className="menu">
-        <li><NavLink className={styles.link} to="/">Converter</NavLink></li>
-        <li><NavLink className={styles.link} to="/support">Support</NavLink></li>
+        <li>
+          <NavLink className={styles.link} to="/">
+            {' '}
+            <i className="fa-solid fa-angle-left" />
+            {' '}
+          </NavLink>
+        </li>
+        <li>
+          {' '}
+          <i className="fa-solid fa-microphone" />
+          <i className="fa-solid fa-gear" />
+          {' '}
+        </li>
       </ul>
     </nav>
   </header>
