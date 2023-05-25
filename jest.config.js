@@ -6,4 +6,8 @@ module.exports = {
   transformIgnorePatterns: [
     '/node_modules/(?!(axios)/)',
   ],
+  moduleFileExtensions: ['js', 'jsx', 'mjs'],
+  moduleNameMapper: {
+    '^axios$': '<rootDir>/node_modules/axios',
+  },
 };

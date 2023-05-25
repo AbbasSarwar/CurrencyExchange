@@ -1,73 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Support Displat renders correctly 1`] = `
-<section
-  className="support"
->
-  <div
-    className="supportContainer"
+exports[`renders Support component 1`] = `
+<DocumentFragment>
+  <section
+    class="support"
   >
-    <h1>
-      Support Currencies
-    </h1>
-    <ul
-      className="supportList"
+    <div
+      class="details"
     >
-      <li
-        className="supportedshow"
-      >
-        <img
-          alt=""
-          src="https://currencyfreaks.com/photos/flags/amd.png"
-        />
-        <p>
-          Armenian Dram
-        </p>
-        <p>
-          AM
-        </p>
-        <p
-          className="date"
-        >
-          2009-09-28
-           
-          -
-          2023-05-24
-        </p>
-        <p
-          className="status"
-        >
-          AVAILABLE
-        </p>
-      </li>
-      <li
-        className="supportedshow"
-      >
-        <img
-          alt=""
-          src="https://currencyfreaks.com/photos/flags/amd.png"
-        />
-        <p>
-          Alchemy Pay
-        </p>
-        <p>
-          ACH
-        </p>
-        <p
-          className="date"
-        >
-          2009-09-28
-           
-          -
-          2023-05-24
-        </p>
-        <p
-          className="status"
-        >
-          AVAILABLE
-        </p>
-      </li>
-    </ul>
-  </div>
-</section>
+      <h2>
+        Currency not found
+      </h2>
+    </div>
+  </section>
+</DocumentFragment>
 `;

@@ -1,37 +1,34 @@
-import renderer from 'react-test-renderer';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { render } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 import Support from './Support';
 
-describe('Support Displat', () => {
-  const exchange = {
-    AMD: {
-      availableFrom: '2009-09-28',
-      availableUntil: '2023-05-24',
-      countryCode: 'AM',
-      countryName: 'Armenia',
-      currencyCode: 'AMD',
-      currencyName: 'Armenian Dram',
-      icon: 'https://currencyfreaks.com/photos/flags/amd.png',
-      status: 'AVAILABLE',
-    },
-    ACH: {
-      availableFrom: '2009-09-28',
-      availableUntil: '2023-05-24',
-      countryCode: 'ACH',
-      countryName: 'Global',
-      currencyCode: 'CYRPTO',
-      currencyName: 'Alchemy Pay',
-      icon: 'https://currencyfreaks.com/photos/flags/amd.png',
-      status: 'AVAILABLE',
-    },
-  };
+// Import jest-dom for additional matchers
+import '@testing-library/jest-dom/extend-expect';
 
-  it('renders correctly', () => {
-    const tree = renderer.create(
-      <BrowserRouter>
-        <Support exchange={exchange} error="" status={exchange.AMD.status} />
-      </BrowserRouter>,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+// Mock axios
+jest.mock('axios', () => ({
+  get: jest.fn().mockResolvedValue({
+    data: {
+      supportedCurrenciesMap: {},
+    },
+  }),
+}));
+
+test('renders Support component', () => {
+  const { getByText, asFragment } = render(
+    <Provider store={store}>
+      <Router>
+        <Support />
+      </Router>
+    </Provider>,
+  );
+
+  const headingElement = getByText('Currency not found');
+  expect(headingElement).toBeInTheDocument();
+
+  // Take a snapshot of the rendered component
+  expect(asFragment()).toMatchSnapshot();
 });
