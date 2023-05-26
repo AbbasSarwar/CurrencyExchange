@@ -1,0 +1,13 @@
+.falseLine {
+  color: rgb(255, 254, 254);
+}
+
+.styleLink {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 786px) {
+  .falseLine {
+    font-size: 12px;
+  }
+}
